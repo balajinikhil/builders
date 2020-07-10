@@ -1,0 +1,13 @@
+extends dashboard
+block content
+    link(rel="stylesheet", href="/css/admin-card.css")
+    each el in admin
+        <div class="card">
+            <img src="/images/admin.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>#{ el.username || "Admin" }</b></h4> 
+                <p></p> 
+            </div>
+        </div>
+
+    //- https://pixabay.com/images/id-1633248/

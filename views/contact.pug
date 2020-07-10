@@ -1,0 +1,57 @@
+<hr style=" border: 1.3px solid black; margin-bottom:0">
+<section id="contact" class="parallax-section" style="margin-top=0">
+    <div class="container">
+        <div class="row">
+            //- <!-- Contact form section
+            //- ================================================== -->
+            <div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-delay="0.6s">
+                <form class="contact-form" action="#" method="post">
+                    <div class="col-md-12 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Name" name="name" id="name" required>
+                        <input type="email" class="form-control" placeholder="Email" name="email" id="email" required>
+                        <input type="text" class="form-control" placeholder="Subject" name="subject" required>
+                        <textarea name="message" rows="8" class="form-control" id="message" placeholder="Message" message="message" required></textarea>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        //- <input name="submit" type="submit" class="form-control g-recaptcha" data-callback='onSubmit' data-sitekey="6LeS7qQZAAAAAGSOezU2D1BQ2COGC0nEpebSmfp7"  data-action='submit' id="submit" value="Send a message">
+                        <input name="submit" type="submit" class="form-control" id="submit" value="Send a message">
+                    </div>
+                </form>
+            </div>
+
+            //- <!-- Contact detail section
+            //- ================================================== -->
+            <div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.9s">
+                <div class="contact-detail">
+                    <h2>CONTACT US</h2>
+                        <div>
+                            <h4>Jireh Portfolio </h4>
+                            <p>160 New Smooth Road, San Francisco, California</p>
+                        </div>
+                        <div>
+                            <h4>Talk to Us</h4>
+                            <p>Email: hello@company.com</p>
+                            <p>Tel: 010-020-0770 &nbsp;&nbsp;&nbsp; Fax: 090-080-0430</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+link(rel="stylesheet", href="/css/popup.css")
+<div class="pop1" style="visibility:hidden">
+    <div class="box">
+      <a class="button1" href="#popup1">Let me Pop up</a>
+    </div>
+
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2 class="t1">Hey!</h2>
+        <a class="close" href="/#contact">&times;</a>
+        <div class="content" style="color:red"><p>Something went wrong try again</p>
+        </div>
+      </div>
+    </div>
+</div>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+script(src="/contact/script.js")

@@ -1,0 +1,37 @@
+extends dashboard
+block content
+    link(rel="stylesheet", href="/css/admin-contact.css")
+    //- <div class="cardz-container">
+        //- each el in contacts
+                <div class="cardz">
+                    //- <img src="/images/team/$.jpg" alt="team-img" style="width:100%">
+                    h2 Name : #{el.name}
+                    h3 Email: #{el.email}
+                    h3 Subject: #{el.subject}
+                    //- <p class="titlez">CEO & Founder, Example</p>
+                    <p>Message: #{el.message}</p>
+                    a(href=`/admin/admin-contact/${el.slug}`)
+                        <button class="team-btn">Delete</button>
+                </div>
+    //- </div>
+    <table id="customers" style="margin-left:10%">
+        <tr>
+            
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>Delete</th>
+        </tr>
+        each el in contacts
+            <tr style="max-width:250px">
+                <td>#{el.name}</td>
+                <td>#{el.email}</td>
+                <td>#{el.subject}</td>
+                <td>#{el.message}</td>
+                <td> 
+                    a(href=`/admin/admin-contact/${el.slug}`)
+                        <button class="team-btn">Delete</button>
+                </td>
+            </tr> 
+    </table>

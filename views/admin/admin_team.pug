@@ -1,0 +1,27 @@
+extends dashboard
+block content
+    link(rel="stylesheet", href="/css/admin-team.css")
+    <div class="cardz-container">
+    each el in team
+        
+        <div class="cardz">
+            //- <img src="/images/team/$.jpg" alt="team-img" style="width:100%">
+            img(src=`/uploads/team/${el.img}`, alt=`${el.img}` style="width:40%")
+            h1=el.name
+            //- <p class="titlez">CEO & Founder, Example</p>
+            <p>#{el.description}</p>
+            a(href=`/admin/admin-team/${el.slug}`)
+                <button class="team-btn">Delete</button>
+        </div>
+    </div>
+    <div class="notification team-form bg-lightgrey" style="border: 2px solid black; padding:10px;">
+        h1 Add New Team Member
+        <form action="/admin/admin-team", method="POST" enctype="multipart/form-data" style="padding:5%">
+            <input type="text", placeholder="Name", name="name" required >
+            textarea(name="description", cols="30", rows="10" required)
+            h3 Select Profile Pic
+            input(type="file", name="img" accept="image/x-png,image/gif,image/jpeg" required)
+            <input type="submit" value="submit" class="team-btn" required>
+        </form>
+    </div>
+
