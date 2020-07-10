@@ -1,3 +1,3 @@
 # builders
 
-Consrtuction Company website with backend to add gallery
+Construction Company website with backend to add gallery
